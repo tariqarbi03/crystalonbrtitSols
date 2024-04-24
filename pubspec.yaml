@@ -1,0 +1,44 @@
+name: crystalonbritsols
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.18.6 <3.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get_cli: any
+  get: 4.6.5
+  permission_handler: ^10.0.0
+  sn_progress_dialog:
+  dio_log:
+  device_preview: ^1.1.0
+  sizer: ^2.0.15
+  image_cropper: ^2.0.3
+  geolocator: ^8.2.1
+  fluttertoast:
+  image_picker: ^0.8.4+9
+  flutter: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
+  assets:
+    - assets/fonts/
+    - assets/icons/
+  fonts:
+    - family: Helvetica
+      fonts:
+        - asset: assets/fonts/helvitika/Helvetica-Bold.ttf
+    - family: Helvetica-regular
+      fonts:
+        - asset: assets/fonts/helvitika/Helvetica.ttf
+    - family: Helvetica Neue Regular
+      fonts:
+        - asset: assets/fonts/helvitika/Helvetica Neue Regular.otf
+
