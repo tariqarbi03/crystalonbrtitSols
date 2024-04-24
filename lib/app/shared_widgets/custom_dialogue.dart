@@ -14,7 +14,6 @@ class CustomDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       backgroundColor: AppColors.kWhite,
-      surfaceTintColor: AppColors.kWhite,
       contentPadding: const EdgeInsets.symmetric(vertical: 16),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
