@@ -15,11 +15,13 @@ class SplashView extends GetView<SplashController> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children:  [
-              const Text(
-                'Crystal On brit Sols',
-                style: TextStyle(fontSize: 20),
-              ).paddingOnly(bottom: 20),
-              const CircularProgressIndicator()
+              Center(
+                child: const Text(
+                  'Crystal On brit Sols',
+                  style: TextStyle(fontSize: 20),
+                ).paddingOnly(bottom: 20),
+              ),
+              Center(child: const CircularProgressIndicator())
             ],
           ),
         );
