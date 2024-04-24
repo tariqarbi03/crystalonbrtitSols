@@ -1,10 +1,11 @@
 import 'package:crystalonbritsols/app/app_constant/utils.dart';
+import 'package:crystalonbritsols/app/data/models/department.dart';
 import 'package:crystalonbritsols/app/data/repositories/auth_repository.dart';
 import 'package:get/get.dart';
 
 class DepartmentController extends GetxController {
   final AuthRepository _repository = AuthRepository();
-  List<dynamic> departments = <dynamic>[];
+  List<Department> departments = <Department>[];
   RxBool loading = true.obs;
 
   @override
@@ -21,7 +22,7 @@ class DepartmentController extends GetxController {
       Get.log('Department ${e.toString()}');
     }
     if (resp!.isNotEmpty) {
-      departments.addAll(resp);
+      departments.addAll(resp.map<Department>((x) => Department.fromJson(x)));
       loading.value = false;
       update();
     } else if(resp.isEmpty) {

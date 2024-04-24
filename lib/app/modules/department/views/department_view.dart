@@ -30,13 +30,10 @@ class DepartmentView extends GetView<DepartmentController> {
                         itemBuilder: (context, index) {
                           return GestureDetector(
                             onTap: () {
-                              Department department = Department.fromJson(
-                                  controller.departments[index]);
-                              Get.toNamed(Routes.USERS, arguments: department);
+                              Get.toNamed(Routes.USERS, arguments: controller.departments[index]);
                             },
                             child: ListTile(
-                              title: Text(controller.departments[index]["name"]
-                                  .toString()),
+                              title: Text(controller.departments[index].name.toString()),
                             ),
                           );
                         },
