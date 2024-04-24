@@ -13,7 +13,7 @@ class LoginScreenController extends GetxController {
   final AuthRepository _repository = AuthRepository();
   TextEditingController emailController=TextEditingController();
   TextEditingController passwordController=TextEditingController();
-  GlobalKey<FormState> formKeySignIn = GlobalKey<FormState>();
+  Rx<GlobalKey<FormState>> formKeySignIn = GlobalKey<FormState>().obs;
   RxBool passWordVisibility = true.obs,isLoading = false.obs;
 
 
